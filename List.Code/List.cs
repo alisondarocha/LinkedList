@@ -35,6 +35,7 @@ namespace LinkedList.Code
                 }
             }
         }
+
         //Method responsible for inverting the elements of the list
         public void InvertList()
         {
@@ -56,6 +57,7 @@ namespace LinkedList.Code
             Tail = Head;
             Head = point1;
         }
+        
         //method responsible for fetching the elements of the list
         public dynamic Get(int node)
         {

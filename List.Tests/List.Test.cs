@@ -2,7 +2,6 @@ using System;
 using NUnit.Framework;
 using LinkedList.Code;
 
-
 namespace LinkedList.Tests
 {   
     [TestFixture]
@@ -111,6 +110,7 @@ namespace LinkedList.Tests
             Assert.AreEqual(list.Get(2), valueExpectation2);
             Assert.AreEqual(list.Get(3), valueExpectation1);
         }
+
         [Test]
         public void GetTest_ReturnValueSelected() //Test to validate the Get method, in case it returns the same expected element
         {
