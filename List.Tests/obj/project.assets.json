@@ -3876,11 +3876,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dalva\\Desktop\\ListaEncadeada\\List.Tests\\List.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Dalva\\Desktop\\LinkedList\\List.Tests\\List.Tests.csproj",
       "projectName": "List.Tests",
-      "projectPath": "C:\\Users\\Dalva\\Desktop\\ListaEncadeada\\List.Tests\\List.Tests.csproj",
+      "projectPath": "C:\\Users\\Dalva\\Desktop\\LinkedList\\List.Tests\\List.Tests.csproj",
       "packagesPath": "C:\\Users\\Dalva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dalva\\Desktop\\ListaEncadeada\\List.Tests\\obj\\",
+      "outputPath": "C:\\Users\\Dalva\\Desktop\\LinkedList\\List.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dalva\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3895,8 +3895,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Dalva\\Desktop\\ListaEncadeada\\List.Code\\List.Code.csproj": {
-              "projectPath": "C:\\Users\\Dalva\\Desktop\\ListaEncadeada\\List.Code\\List.Code.csproj"
+            "C:\\Users\\Dalva\\Desktop\\LinkedList\\List.Code\\List.Code.csproj": {
+              "projectPath": "C:\\Users\\Dalva\\Desktop\\LinkedList\\List.Code\\List.Code.csproj"
             }
           }
         }

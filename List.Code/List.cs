@@ -3,10 +3,10 @@ using System;
 namespace LinkedList.Code
 {
     public class ListForm //Class responsible for creating the list, and for all usability
-    {   
+    {
         public Node? Head;
         public Node? Tail;
-
+  
         //method responsible for instantiating the nodes and adding an element to the list
         public dynamic AddValue(dynamic value)
         {
@@ -14,7 +14,7 @@ namespace LinkedList.Code
             newNode.Value = value;
 
             if (Head == null)
-                Head = newNode; 
+                Head = newNode;
             else
                 Tail.Next = newNode;
 
@@ -31,7 +31,7 @@ namespace LinkedList.Code
                 while (print != null)
                 {
                     Console.WriteLine(print.Value);
-                    print = print.Next;   
+                    print = print.Next;
                 }
             }
         }
@@ -39,14 +39,11 @@ namespace LinkedList.Code
         //Method responsible for inverting the elements of the list
         public void InvertList()
         {
-            Node point1;
-            Node point2;
-            Node point3;
+            Node point1 = null;
+            Node point2 = Head;
+            Node point3;          
 
-            point1 = null;
-            point2 = Head;
-
-            while(point2 != null)
+            while (point2 != null)
             {
                 point3 = point2.Next;
                 point2.Next = point1;
@@ -57,17 +54,32 @@ namespace LinkedList.Code
             Tail = Head;
             Head = point1;
         }
-        
+
+        //Method responsible for counting the elements of the list
+        public int Size()
+        {
+            Node point = Head;
+            int count = 0;
+
+            while (point != null)
+            {
+                point = point.Next;
+                count += 1;
+            }
+                Console.WriteLine(count + " elementos na lista");
+                return count;
+
+        }
+
         //method responsible for fetching the elements of the list
         public dynamic Get(int node)
         {
-            Node point;
-            point = Head;
+            Node point = Head;
             int count = 0;
 
-            if(count != node)
+            if (count != node)
             {
-                while(count != node)
+                while (count != node)
                 {
                     point = point.Next;
                     count += 1;
@@ -77,5 +89,37 @@ namespace LinkedList.Code
             else
                 return Head.Value;
         }
+
+        //Method responsible for removing elements from the list
+        public void RemoveElement(dynamic element)
+        {
+            Node pointer = Head;
+            Node previous = null;
+
+            string elementString = Convert.ToString(element);
+            string headValueString = Convert.ToString(Head.Value);
+
+            if(Head == null)
+                Console.WriteLine("Lista vazia!");
+            else if(headValueString == elementString)
+                Head = Head.Next;
+            else
+            {
+                previous = Head;
+                pointer = Head.Next;
+
+                while (pointer != null)
+                {  
+                    string pointerValueString = Convert.ToString(pointer.Value);
+
+                    if(pointerValueString == elementString)
+                    {
+                        previous.Next = pointer.Next;
+                    }
+                    previous = pointer;
+                    pointer = pointer.Next;
+                }
+            }
+        }
     }
-}   
+}

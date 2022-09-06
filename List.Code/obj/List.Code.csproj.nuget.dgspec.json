@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dalva\\Desktop\\ListaEncadeada\\List.Code\\List.Code.csproj": {}
+    "C:\\Users\\Dalva\\Desktop\\LinkedList\\List.Code\\List.Code.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dalva\\Desktop\\ListaEncadeada\\List.Code\\List.Code.csproj": {
+    "C:\\Users\\Dalva\\Desktop\\LinkedList\\List.Code\\List.Code.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dalva\\Desktop\\ListaEncadeada\\List.Code\\List.Code.csproj",
+        "projectUniqueName": "C:\\Users\\Dalva\\Desktop\\LinkedList\\List.Code\\List.Code.csproj",
         "projectName": "List.Code",
-        "projectPath": "C:\\Users\\Dalva\\Desktop\\ListaEncadeada\\List.Code\\List.Code.csproj",
+        "projectPath": "C:\\Users\\Dalva\\Desktop\\LinkedList\\List.Code\\List.Code.csproj",
         "packagesPath": "C:\\Users\\Dalva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dalva\\Desktop\\ListaEncadeada\\List.Code\\obj\\",
+        "outputPath": "C:\\Users\\Dalva\\Desktop\\LinkedList\\List.Code\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dalva\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -12,13 +12,13 @@ namespace LinkedList.Tests
         {
             //setup
             dynamic valueInt = 2002;
-            dynamic expectationResult = 2002;
+            dynamic valueExpectation = 2002;
 
             //execution
             var result = new ListForm().AddValue(valueInt);
 
             //expectation
-            Assert.AreEqual(result, expectationResult);
+            Assert.AreEqual(result, valueExpectation);
         }
 
         [Test]
@@ -26,13 +26,13 @@ namespace LinkedList.Tests
         {
             //setup
             string valueString = "Hello World";
-            string expectationResult = "Hello World";
+            string valueExpectation = "Hello World";
 
             //execution
             var result = new ListForm().AddValue(valueString);
 
             //expectation
-            Assert.AreEqual(result, expectationResult);
+            Assert.AreEqual(result, valueExpectation);
         }
 
         [Test]
@@ -50,13 +50,13 @@ namespace LinkedList.Tests
         {
             //setup
             dynamic valueData = System.DateTime.Today;
-            dynamic expectationResult = System.DateTime.Today;
+            dynamic valueExpectation = System.DateTime.Today;
 
             //execution
             var result = new ListForm().AddValue(valueData);
 
             //expectation
-            Assert.AreEqual(result, expectationResult);
+            Assert.AreEqual(result, valueExpectation);
         }
 
         [Test]
@@ -95,6 +95,7 @@ namespace LinkedList.Tests
             dynamic valueExpectation2 = "Oi";
             dynamic valueExpectation3 = System.DateTime.Today;
             dynamic valueExpectation4 = 2002;
+
             var list = new ListForm();
             list.AddValue(valueExpectation1);
             list.AddValue(valueExpectation2);
@@ -116,6 +117,7 @@ namespace LinkedList.Tests
         {
             //setup
             dynamic valueExpectation = "Hello World";
+
             var list = new ListForm();
             list.AddValue(1999); //0
             list.AddValue(2.2); //1
@@ -129,5 +131,46 @@ namespace LinkedList.Tests
             //expectation
             Assert.AreEqual(valueList, valueExpectation);
         }
+        [Test]
+        public void Size_ReturnListSize()
+        {
+            //setup 
+            int valueExpectation = 4;
+
+            var list = new ListForm();
+            list.AddValue(2000);
+            list.AddValue("Oi");
+            list.AddValue("Tchau");
+            list.AddValue(1.5);
+
+            //execution
+            var listSize = list.Size();
+
+            //expectation
+            Assert.AreEqual(listSize, valueExpectation);
+            } 
+            [Test]
+            public void Remove_ReturnListElemenRemoved()
+            {
+                //setup
+                dynamic valueExpectation1 = "Hello World";
+                dynamic valueExpectation2 = System.DateTime.Today;
+                dynamic valueExpectation3 = 2002;
+
+                var list = new ListForm();
+                list.AddValue("Hello World");
+                list.AddValue(1.5);
+                list.AddValue(System.DateTime.Today);
+                list.AddValue(1.5);
+                list.AddValue(2002);
+                
+                //execution
+                list.RemoveElement(1.5);
+
+                //expectation
+                Assert.AreEqual(list.Get(0), valueExpectation1);
+                Assert.AreEqual(list.Get(1), valueExpectation2);
+                Assert.AreEqual(list.Get(2), valueExpectation3);
+            }   
+        }  
     }
-}
