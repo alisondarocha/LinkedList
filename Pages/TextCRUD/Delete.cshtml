@@ -1,0 +1,27 @@
+@page
+@model LinkedList_Web.Pages_Text.DeleteModel
+
+@{
+    ViewData["Title"] = "Exclusão de Elemento";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3>Digite o elemento da lista que deseja excluir</h3>
+<div>
+    <div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TextRemove.Elementos" class="control-label"></label>
+                <input type="hidden" asp-for="TextRemove.Elementos" class="form-control" type="text" />
+                <span asp-validation-for="TextRemove.Elementos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Excluir" class="btn btn-danger" /> 
+            </div>
+        </form>
+    </div>
+    <a asp-page="./Index">Voltar à Listagem</a>
+</div>

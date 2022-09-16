@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/List.Code/List.Code.csproj",
+                "${workspaceFolder}/LinkedList-Web.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/List.Code/List.Code.csproj",
+                "${workspaceFolder}/LinkedList-Web.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/List.Code/List.Code.csproj"
+                "${workspaceFolder}/LinkedList-Web.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

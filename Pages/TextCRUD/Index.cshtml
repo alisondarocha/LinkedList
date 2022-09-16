@@ -1,0 +1,43 @@
+@page
+@model LinkedList_Web.Pages_Text.IndexModel
+
+@{
+    ViewData["Title"] = "Listagem de Lista";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-page="Create" type="button" class="btn btn-success">Adicionar Elementos</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Text[0].Elementos)
+            </th>
+        </tr>
+    </thead>
+<tbody>
+    @foreach (var item in Enumerable.Range(0, Model.Lista.Size()))
+    {
+        <tr>
+            <td>
+                @Model.Lista.Get(item)
+            </td>
+        </tr>
+    }
+</tbody>
+</table>
+<div>
+    <div>
+        <a>
+            <td>@Model.Lista.Size()</td> elementos nesta lista
+        </a>
+    </div>
+</div>
+<div>
+
+    <a asp-page="Edit" type="button" class="btn btn-dark">Inverter a lista</a>
+</div>

@@ -1,0 +1,39 @@
+@page
+@model LinkedList_Web.Pages_Text.EditModel
+
+@{
+    ViewData["Title"] = "Lista invertida";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Text[0].Elementos)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Enumerable.Range(0, Model.Lista.Size()))
+        {
+            <tr>
+                <td>
+                    @Model.Lista.Get(item)
+                </td>
+                <td>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <a asp-page="./Index" type="button" class="btn btn-dark">Voltar à Listagem</a>
+</div>
+
+@section Scripts {
+@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
